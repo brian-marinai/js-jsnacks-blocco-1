@@ -1,18 +1,24 @@
 
-
-
 var genera = document.getElementById("genera");
-var numero = document.getElementById("numero");
-numero.classList.add("pari", "dispari");
+
 
 genera.addEventListener ("click", function () {
-  numero = (Math.floor(Math.random() * 10) + 1);
+
+  var numero = document.getElementById("numero");
+
+  element = (Math.floor(Math.random() * 10) + 1);
+
+  numero.classList.add ("pari", "dispari");
 
 
 
-  if (!(numero % 2)) {
+  if (!(element % 2)) {
     numero.classList.remove ("pari");
-  } else if (numero % 2) {
+  } else if (element % 2) {
     numero.classList.remove ("dispari");
   }
+
+  numero.innerHTML = element;
+
+
 });
